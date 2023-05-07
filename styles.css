@@ -75,6 +75,12 @@
     /* este es el elemento padre, le agregamos un position y ahora nuestro position absolute sera absoluto pero dentro de este elemento */
     position: relative;
   }
+
+  .scroll{
+    overflow: scroll;
+    border: 2px solid red;
+    height: 250px;
+  }
   
   .absolute {
     /* libera al elemento de cualquier contenedor, y lo eleva por encima de los demas elementos, pero a diferencia de relative a este no se le reserva un espacio como tal sino se vuelve un elemento flotante */
@@ -89,10 +95,12 @@
     /* funciona igual que el absolute en cuanto a que se eleva el elemento, y no se reserva su espacio, pero la difrenecia esta en que el este elemento donde sea que lo pocisionemos va a mantener su pocision en relacion al viewport o pov de la pagina */
     /* si hacemos scroll notaremos que el elemento mantiene su pocision en relacion a la vista */
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 45%;
   }
   
   .sticky {
-    
+    /* Es muy parecido a fixed, solo que sticky recibe unas ordenes directas, una de esas es que se queda fijo con respecto al primer ancestro que tenga mucho scroll y ordena todo de esa manera */
+    position: sticky;
+    top: 0;
   }
