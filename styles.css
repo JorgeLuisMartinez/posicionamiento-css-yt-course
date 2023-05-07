@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    background-color: #000000;
+    height: 300vh;
+  }
+  
+  h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  div {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.261);
+    border-radius: 5px;
+  }
+  
+  .static,
+  .relative,
+  .absolute,
+  .fixed,
+  .sticky {
+    padding: 1rem;
+  }
+  
+  .parent {
+    background-color: #555555;
+  }
+  
+  .static {
+    background-color: #dddddd;
+  }
+  
+  .relative {
+    background-color: #81c476;
+  }
+  
+  .absolute {
+    background-color: #fc9191;
+  }
+  
+  .fixed {
+    background-color: #a8d5e2;
+  }
+  
+  .sticky {
+    background-color: #e1e1ac;
+  }
+  
+  
+  /* CSS Position */
+  
+  .static {
+    /* Es el posicionamiento natural que tienen todos los elementos de html si no les hemos especificado alguno otro */
+    position: static;
+  }
+  
+  .relative {
+    /* Pone al elemento una capa por encima */
+    position: relative;
+    /* como todas las position podemos mover el elemento con cada uno de sus direcciones */
+    top: 10px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .parent {
+    /* este es el elemento padre, le agregamos un position y ahora nuestro position absolute sera absoluto pero dentro de este elemento */
+    position: relative;
+  }
+  
+  .absolute {
+    /* libera al elemento de cualquier contenedor, y lo eleva por encima de los demas elementos, pero a diferencia de relative a este no se le reserva un espacio como tal sino se vuelve un elemento flotante */
+
+    /* como pocisionar un elemento absoluto dentro de algun elemento padre, dandole una pocision a ese elemento padre */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .fixed {
+    /* funciona igual que el absolute en cuanto a que se eleva el elemento, y no se reserva su espacio, pero la difrenecia esta en que el este elemento donde sea que lo pocisionemos va a mantener su pocision en relacion al viewport o pov de la pagina */
+    /* si hacemos scroll notaremos que el elemento mantiene su pocision en relacion a la vista */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .sticky {
+    
+  }
